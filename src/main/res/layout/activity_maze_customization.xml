@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".maze.MazeCustomization">
+
+    <Button
+        android:id="@+id/adventure_Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="choose_blue"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/adventure_blue"
+        app:layout_constraintEnd_toStartOf="@+id/adventure_Green"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/adventure_Green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:onClick="choose_green"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/adventure"
+        app:layout_constraintBaseline_toBaselineOf="@+id/adventure_Blue"
+        app:layout_constraintEnd_toStartOf="@+id/adventure_Gray" />
+
+    <Button
+        android:id="@+id/adventure_Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:onClick="choose_gray"
+        android:background="@android:color/darker_gray"
+        android:text="@string/adventure_gray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/adventure_Green"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/adventure_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/adventure_color"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

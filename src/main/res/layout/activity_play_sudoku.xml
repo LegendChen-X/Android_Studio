@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".maze.level_game.puzzle.activity.PlayNumberPuzzleActivity">
+
+    <com.example.game.maze.level_game.puzzle.grid.PuzzleGridView
+        android:id="@+id/sudokuGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:horizontalSpacing="0dp"
+        android:numColumns="9"
+        android:verticalSpacing="0dp" />
+
+    <com.example.game.maze.level_game.puzzle.button.ButtonsGridView
+        android:id="@+id/buttongridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sudokuGridView"
+        android:numColumns="6" />
+
+    <TextView
+        android:id="@+id/timeRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/timeRemaining" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="33dp"
+        android:onClick="submit"
+        android:text="@string/submit" />
+
+</RelativeLayout>

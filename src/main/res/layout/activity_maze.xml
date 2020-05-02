@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".maze.MazeActivity">
+
+    <view
+        android:id="@+id/mazeView"
+        class="com.example.game.maze.GameView"
+        android:layout_width="0dp"
+        android:layout_height="582dp"
+        app:layout_constraintBottom_toBottomOf="@+id/upButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <Button
+        android:id="@+id/upButton"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:onClick="sendUpButton"
+        app:layout_constraintBottom_toTopOf="@+id/downButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/downButton"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:onClick="sendDownButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="83dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="sendLeftButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="82dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="sendRightButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/mazeQuit"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="quitMazeButton"
+        android:text="@string/mazeQuit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/mazeSave"
+        android:layout_width="74dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="saveMazeButton"
+        android:text="@string/mazeSave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/mazecoin"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@+id/mazeenergy5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coin" />
+
+    <ImageView
+        android:id="@+id/mazeenergy1"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lightning" />
+
+    <ImageView
+        android:id="@+id/mazeenergy2"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@+id/mazeenergy1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lightning" />
+
+    <ImageView
+        android:id="@+id/mazeenergy3"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@+id/mazeenergy2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lightning" />
+
+    <ImageView
+        android:id="@+id/mazeenergy4"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@+id/mazeenergy3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lightning" />
+
+    <ImageView
+        android:id="@+id/mazeenergy5"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@+id/mazeenergy4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lightning" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:text="POINT"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mazecoinnumber"
+        app:layout_constraintStart_toEndOf="@+id/mazecoinnumber" />
+
+    <TextView
+        android:id="@+id/mazecoinnumber"
+        android:layout_width="62dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="7dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/mazecoin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mazepoint"
+        android:layout_width="69dp"
+        android:layout_height="30dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

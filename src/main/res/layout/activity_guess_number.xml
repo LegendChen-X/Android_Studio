@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E403A9F4"
+    tools:context=".maze.level_game.button_game.guess_number.GuessNumberActivity">
+
+    <ImageView
+        android:id="@+id/heart1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/guesstextView5"
+        app:layout_constraintEnd_toStartOf="@+id/heart2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/life" />
+
+    <ImageView
+        android:id="@+id/heart5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/guesstextView5"
+        app:layout_constraintEnd_toStartOf="@+id/guesstextView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/heart4"
+        app:srcCompat="@drawable/life" />
+
+    <ImageView
+        android:id="@+id/heart4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/guesstextView5"
+        app:layout_constraintEnd_toStartOf="@+id/heart5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/heart3"
+        app:srcCompat="@drawable/life" />
+
+    <ImageView
+        android:id="@+id/heart2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/guesstextView5"
+        app:layout_constraintEnd_toStartOf="@+id/heart3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/heart1"
+        app:srcCompat="@drawable/life" />
+
+    <ImageView
+        android:id="@+id/heart3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/guesstextView5"
+        app:layout_constraintEnd_toStartOf="@+id/heart4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/heart2"
+        app:srcCompat="@drawable/life" />
+
+    <EditText
+        android:id="@+id/guesseditText2"
+        android:layout_width="0dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#51D366"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/guesstextView6"
+        app:layout_constraintEnd_toStartOf="@+id/guesstextView6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guesstextView5" />
+
+    <Button
+        android:id="@+id/guessbutton5"
+        android:layout_width="97dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="240dp"
+        android:backgroundTint="#FFC107"
+        android:onClick="startGame"
+        android:text="@string/button_send"
+        android:textColor="#070707"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Doge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guesseditText2" />
+
+    <TextView
+        android:id="@+id/guesstextView3"
+        android:layout_width="177dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guesstextView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toEndOf="@+id/heart5" />
+
+    <TextView
+        android:id="@+id/guesstextView5"
+        android:layout_width="0dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="20dp"
+        android:background="#51D366"
+        android:text="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="60sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/guesseditText2"
+        app:layout_constraintEnd_toStartOf="@+id/guesseditText2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/guesstextView6"
+        android:layout_width="0dp"
+        android:layout_height="102dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="310dp"
+        android:background="#51D366"
+        android:text="50"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guesseditText2" />
+
+    <ImageView
+        android:id="@+id/Doge"
+        android:layout_width="55dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="248dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guessbutton5"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guesseditText2"
+        app:srcCompat="@drawable/doge" />
+
+    <Button
+        android:id="@+id/GuessSetlanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="268dp"
+        android:backgroundTint="#2F8CD8"
+        android:onClick="setLanguage"
+        android:text="中文"
+        app:layout_constraintBottom_toTopOf="@+id/guesstextView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="125dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="244dp"
+        android:text="Switch language to "
+        app:layout_constraintBottom_toTopOf="@+id/GuessSetlanguage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
